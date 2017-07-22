@@ -1,0 +1,9 @@
+{
+    "require": {
+        "serps/core": "*",
+        "serps/search-engine-google": "*",
+        "serps/http-client-curl": "*",
+        "zendframework/zend-diactoros": "^1.4",
+        "kint-php/kint": "^2.1"
+    }
+}
