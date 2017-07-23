@@ -3,6 +3,9 @@ body {
     font-size: 1.1em;
 }
 li {
-    font-size: 0.9em;
+    font-size: 0.777em;
+}
 
+a {
+	color:red;
 }

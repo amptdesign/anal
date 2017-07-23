@@ -23,29 +23,40 @@
     $someProxy=null; 
     $someCookies=null;
     $browser = new Browser(new CurlClient(), $userAgent, $language, $someProxy, $someCookies);
-
-    $googleUrl = new GoogleUrl();
-    $searchTerm = 'SHIH SHUI KUNG FU';
-    $googleUrl->setSearchTerm($searchTerm);
-
     $googleClient = new GoogleClient($browser);
-    $response = $googleClient->query($googleUrl);
+    
+    $googleUrl = new GoogleUrl();
+    // $searchTerm = 'SHIH SHUI KUNG FU'; 
+    $searchTerm = 'craigslist androgel'; 
 
+
+    $googleUrl->setSearchTerm($searchTerm);
+    $response = $googleClient->query($googleUrl);
     $results = $response->getNaturalResults();
     
-
   ?>
 
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Testing curl with serps</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="sanitize.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMPT DESIGN SEO</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/sanitize.css"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    
+    
+    
+
 <body>
 
 <h3>Google words searched: <?php echo $searchTerm; ?></h3>
@@ -62,9 +73,9 @@
         }
     }
 
-    $temp = 'hotdog';
-    try {if (isKeyword($temp)=='korean') {echo 'success!';};} 
-    catch (Exception $e) {echo 'Caught exception: ',$e->getMessage(),"\n";}
+    // $temp = 'hotdog';
+    // try {if (isKeyword($temp)=='korean') {echo 'success!';};} 
+    // catch (Exception $e) {echo 'Caught exception: ',$e->getMessage(),"\n";}
 
 ?>
 </ol>
@@ -73,5 +84,8 @@
 // echo phpinfo(); 
 // echo phpversion();
  ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
