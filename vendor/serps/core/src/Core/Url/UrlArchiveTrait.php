@@ -453,16 +453,23 @@ trait UrlArchiveTrait
         }
 
         // If not resolved as an alterable url we need to use an alterable url and to transform it latter
+        echo "before";
+        exit;
         if (!in_array(AlterableUrlInterface::class, $implements)) {
             return $this->resolveAsAlterableUrl($url, Url::class)->cloneAs($as);
+            echo "in if";
+            exit;
         } else {
             return $this->resolveAsAlterableUrl($url, Url::class);
+            echo "else";
+            exit;
         }
     }
 
     public function resolveAsString($url)
     {
         return $this->resolveAsAlterableUrl($url, Url::class)->buildUrl();
+        echo "in resolve as string";
     }
 
     /**
